@@ -1,0 +1,9 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: remove-server-header
+  namespace: pvc-example
+spec:
+  headers:
+    customResponseHeaders:
+      server: "" # Removes

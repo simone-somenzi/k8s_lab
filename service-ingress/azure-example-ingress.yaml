@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: azure-vote-ingress
+  namespace: pvc-example
+  annotations:
+    kubernetes.io/spec.ingressClassName: traefik
+    # ingress.kubernetes.io/auth-type: basic
+    # ingress.kubernetes.io/auth-secret: mysecret
+spec:
+  rules:
+  - host: domain
+    http:
+      paths:
+      - backend:
+          service:
+            name: azure-vote-front
+            port: 
+              number: 80
+        path: /
+        pathType: Prefix

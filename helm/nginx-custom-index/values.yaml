@@ -1,0 +1,5 @@
+displayText: "con colore giallo"
+displayColor: "yellow"
+nginx:
+  staticSiteConfigmap: index-cm
+

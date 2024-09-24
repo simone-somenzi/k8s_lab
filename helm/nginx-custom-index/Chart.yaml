@@ -1,0 +1,12 @@
+apiVersion: v2
+name: nginx-custom-index
+version: 0.2.0
+appVersion: "0.2.0"
+description: Test NGINX
+
+type: application
+
+dependencies:
+  - name: nginx
+    version: "13.1.0"
+    repository: "https://charts.bitnami.com/bitnami"

@@ -1,0 +1,5 @@
+containerPorts:
+  http: 8081
+
+service:
+  type: ClusterIP
