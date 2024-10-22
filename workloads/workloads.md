@@ -29,3 +29,12 @@ kubectl create secret generic nginx-secret --from-literal PASSWORD=P@ssw0rd -o y
 kubectl apply -k deployment-example/
 k get secrets  -n devforce-workload  nginx-secret -o jsonpath="{.data.PASSWORD}" | base64 -d
 ~~~
+
+## RBAC example
+~~~bash
+kubectl api-resources
+kubectl api-resources --namespaced=true
+
+kubectl apply -k rbac-example
+
+~~~

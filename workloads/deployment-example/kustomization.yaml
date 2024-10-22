@@ -1,4 +1,4 @@
-namespace: devforce-workload
+namespace: example-workload
 
 resources:
   - ns.yaml
