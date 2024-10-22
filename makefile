@@ -65,3 +65,7 @@ traefik-install:
 		helm repo add traefik https://helm.traefik.io/traefik
 		helm repo update
 		helm install traefik traefik/traefik -n traefik --create-namespace 
+
+nginx-crd-intall:
+		@echo "${BLUE}Installing NGINX CRD${FLAT}"
+		helm install nginx-crd -n nginx-crd oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.4.0 --create-namespace 
