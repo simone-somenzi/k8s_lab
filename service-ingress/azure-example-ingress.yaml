@@ -4,12 +4,14 @@ metadata:
   name: azure-vote-ingress
   namespace: pvc-example
   annotations:
-    kubernetes.io/spec.ingressClassName: traefik
+    #kubernetes.io/spec.ingressClassName: traefik
+    #kubernetes.io/spec.ingressClassName: nginx
     # ingress.kubernetes.io/auth-type: basic
     # ingress.kubernetes.io/auth-secret: mysecret
 spec:
+  ingressClassName: nginx
   rules:
-  - host: domain
+  - host: azure-vote
     http:
       paths:
       - backend:
