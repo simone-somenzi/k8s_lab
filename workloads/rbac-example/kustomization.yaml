@@ -1,0 +1,10 @@
+namespace: rbac-example
+
+resources:
+  - ns.yaml
+  - node-reader-sa.yaml
+  - get-node-cr.yaml
+  - get-node-crb.yaml
+  - get-node-deployment.yaml
+  
+

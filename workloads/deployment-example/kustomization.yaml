@@ -1,0 +1,10 @@
+namespace: example-workload
+
+resources:
+  - ns.yaml
+  - nginx-cm.yaml
+  - nginx-png-cm.yaml
+  - nginx-index-cm.yaml
+  - nginx-secret.yaml
+  - nginx-deployment.yaml
+  - nginx-svc.yaml

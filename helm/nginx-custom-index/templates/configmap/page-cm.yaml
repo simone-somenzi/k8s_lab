@@ -1,0 +1,15 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: index-cm
+  labels:
+    {{- include "nginx-custom-index.labels" . | nindent 4 }}    
+data:
+  index.html: |
+    <!DOCTYPE html>
+      <html>
+       <body><br/><br/>
+       <h1 style="text-align:center;background-color:{{ .Values.displayColor }};">Installazione {{ .Values.displayText }}</h1>
+       <p style="text-align:center">Powered by Ai FACTORY</p>
+       </body>
+    </html>

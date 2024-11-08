@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: rbac-node-view
+subjects:
+- kind: ServiceAccount
+  name: node-reader-sa
+  #namespace: specifi_namesapce
+roleRef:
+  kind: ClusterRole
+  name: node-view
+  apiGroup: rbac.authorization.k8s.io

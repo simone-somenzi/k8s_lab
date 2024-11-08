@@ -1,0 +1,8 @@
+namespace: pvc-example
+
+resources:
+  - ns.yaml
+  - sc.yaml
+  - pvc.yaml
+  - azure-example-front.yaml
+  - azure-example-back.yaml

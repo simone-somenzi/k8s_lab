@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: get-node-info
+spec:
+  selector:
+    matchLabels:
+      app: get-node-info
+  template:
+    metadata:
+      labels:
+        app: get-node-info
+    spec:
+      serviceAccountName: node-reader-sa
+      containers:
+      - name: gete-node-info
+        image: bitnami/kubectl:1.28.2-debian-11-r0
+        command: [ "sh", "-c"] 
+        args: ['while true;
+                do 
+                kubectl get node;
+                sleep 3;
+                echo "TRY TO GET PODS LIST";
+                kubectl get pods;
+                sleep 3;
+                done']
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+     
+
