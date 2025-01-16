@@ -5,7 +5,7 @@
 ~~~bash
 kubectl apply -f azure-example-ingress.yaml
 #add authentication
-#htpasswd -c auth username
+htpasswd -cb auth user P@ssw0rd
 #kubectl create secret generic basic-auth --from-file=auth
 kubectl apply -f azure-vote-auth-secret.yaml
 ~~~
