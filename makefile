@@ -72,7 +72,7 @@ traefik-install:
 
 nginx-crd-intall:
 		@echo "${BLUE}Installing NGINX CRD${FLAT}"
-		helm install nginx-crd -n nginx-crd oci://ghcr.io/nginxinc/charts/nginx-ingress --version 1.4.0 --create-namespace 
+		helm upgrade --install ingress-nginx ingress-nginx \   --repo https://kubernetes.github.io/ingress-nginx \   --namespace ingress-nginx --create-namespace
 
 firexox-install: 
 		@echo "${BLUE}Installing Firefox${FLAT}"
